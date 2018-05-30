@@ -1,0 +1,56 @@
+<settings>
+<!--licensekey>V3#3576#D20160201#S1#af0b622556af1080-S14bab6ea9ced4f01-770f28af53bdb46d-0f1364c155a4e4df-aed0547463c4e7a8-29aceccc336c0381-c5ab7b0d29675d9c-e487c10aa0119a00-c474165a310b00a7</licensekey-->
+<licensekey>V3#3576#D20160701#S1#47059299577614f0-S14bab6ea9ced4f01-770f28af53bdb46d-0f1364c155a4e4df-aed0547463c4e7a8-29aceccc336c0381-c5ab7b0d29675d9c-e487c10aa0119a00-62e9b2245d57e605</licensekey>
+<customer>telin</customer>
+<servers>
+<server name="Telin Speed Test" id="1"   >
+  <method type="tcp" host="speedtest.telin.co.id:8080" />
+  <method type="http" url="http://speedtest.telin.co.id/speedtest/upload.php"    />
+</server>
+<!--<server name="Singapore ST" id="3"   >
+  <method type="tcp" host="speedtest.telin.sg:8080" />
+  <method type="http" url="http://speedtest.telin.sg/speedtest/upload.php"    />
+</server><server name="Hong Kong ST" id="5"   >
+  <method type="tcp" host="speedtest.telin.hk:8080" />
+  <method type="http" url="http://speedtest.telin.hk/speedtest/upload.php"    />
+</server><server name="UK ST" id="8"   >
+  <method type="tcp" host="speedtest.telin.co.uk:8080" />
+  <method type="http" url="http://speedtest.telin.co.uk/speedtest/upload.php"    />
+</server><server name="US ST" id="9"   >
+  <method type="tcp" host="speedtest.telin.us:8080" />
+  <method type="http" url="http://speedtest.telin.us/speedtest/upload.php"    />
+</server><server name="Japan NG" id="11"   >
+  <method type="tcp" host="speedtest.telin.jp:8080" />
+  <method type="http" url="http://speedtest.telin.us/speedtest/upload.php"    /> 
+</server>-->
+</servers>
+<!--  Connection Templates: https://support.ookla.com/entries/23000438-NetGauge-Client-Configuration-Templates
+ connection - broadband, fiber, lan 
+-->
+<configuration connection="broadband" />
+<!--  NetGauge settings: 
+ activetests - test list from speedtest,latency,packetloss,firewall 
+-->
+<netgauge activetests="speed, latency, packetloss" />
+<!--  skiponfailure - Skip test when Java is missing instead of displaying an error 
+-->
+<java skiponfailure="true" />
+<interface clienticon="house"  incrementtemplate="100M"  template="mbps"  servericon="office" />
+<!--  toprow and bottomrow form the end of test grid. That grid can be up to 2x5 - L=latency, P = packetloss, S = speed, F = firewall
+See: https://support.ookla.com/entries/22679642-NetGauge-End-of-Test-Configuration 
+-->
+<endoftest
+        columns="3"
+         toprow="LSS"
+      bottomrow="JSS"
+/>
+<errors linktodocs="true" />
+<linequality packetlosslength="100"  packetlosspause="20" />
+<extras autostart="false"  repeat="0" />
+<!--  enabled - Display IP available modes: disabled (0), local(1), API (2), IP+ISP (3)  
+-->
+<ip enabled="3"  ip="%CLIENT_IP%" />
+<reporting jsreporting="3" />
+
+
+</settings>

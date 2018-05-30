@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+    	/*style modal*/
+  /* The Modal (background) */
+  .modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 50%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 1.4s;
+      animation-name: animatetop;
+      animation-duration: 1.4s
+  }
+
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+  }
+
+  @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+  }
+
+  /* The Close Button */
+  .close {
+      color: black;
+      float: right;
+      font-size: 38px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  .modal-header {
+      padding: 2px 16px;
+      background-color: #00A65A;
+      color: white;
+  }
+
+  .modal-body {padding: 2px 16px;}
+
+  .modal-footer {
+      padding: 2px 16px;
+      background-color: #00A65A;
+      color: white;
+  }
+
+  /*/.modal*/
+
+    </style>
+  </head>
+
+  <body>
+    <!-- modal lokasi null -->
+          <div id="modal_lokasi_null" class="modal">  
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span id="x" class="close">&times;</span>
+                <h2>Pencarian Aluminium Terdekat</h2>
+              </div>
+              <div class="modal-body">
+                <p>Mohon maaf, untuk sementara data lokasi Anda masih belum kami peroleh. Mohon untuk menutup (Close) Pesan ini. Kami akan memuat ulang lokasi Anda. Terimakasih</p>
+              </div>
+              <div class="modal-footer">
+                <h3>Aluminium - 2018</h3>
+              </div>
+            </div>
+          </div>
+          <!-- /.modal -->
+          <script type="text/javascript">
+                var modal = document.getElementById('modal_lokasi_null');
+                var span =  document.getElementById('x');
+                var latitude = document.getElementById('lat');
+                var longitude = document.getElementById('long');
+                var submit = document.getElementById('tSubmit');
+                span.onclick = function(){
+                  modal.style.display = "none";
+                  window.location.href = "<?php echo base_url('index.php/alumniterdekathaversine');?>";
+                }
+
+                </script>
+  </body>
+</html>

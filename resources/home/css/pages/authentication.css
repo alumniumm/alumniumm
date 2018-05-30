@@ -1,0 +1,217 @@
+/* 
+TEMPLATE NAME : Skapp - APP Landing Page
+VERSION : 1.3
+CREATED : 1 May 2017
+LAST UPDATE : 18 June 2017
+AUTHOR : Saerox
+URL : http://themeforest.net/user/Saerox
+*/
+/* -----------------------------------------------------------
+TABLE OF CONTENTS:
+--------------------------------------------------------------
+01) Main
+02) Responsive
+-------------------------------------------------------------
+------------------------------------------------------------*/
+/*-----------------------------------------
+01) Main
+--------------------------------------------------*/
+.logo-med {
+  width: 70px;
+  margin: 0 auto;
+}
+.welcome {
+  background: url('../../images/background/10.jpg') no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  display: block;
+}
+.welcome-wrap-content {
+  background: rgba(64, 84, 90, 0.8);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+}
+.welcome-content{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  padding: 0 50px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.welcome h1 {
+  font-family: 'Montserrat', serif;
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 400;
+}
+.welcome h2 {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  width: 70%;
+}
+.login-form {
+  padding: 120px 65px 65px;
+  display: block;
+}
+.login-form h3 {
+  color: #40545a;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.login-form .description {
+  color: #40545a;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.login-form .group {
+  position: relative;
+  margin-bottom: 30px;
+}
+.login-form input,
+.login-form textarea {
+  font-size: 14px;
+  padding: 15px 10px 15px 15px;
+  display: block;
+  width: 100%;
+  border: 0 none;
+  border-bottom: 2px solid #eaedf2;
+  color: #969696;
+}
+.login-form textarea {
+  min-height: 150px;
+}
+.login-form input:focus,
+.login-form textarea:focus {
+  outline: none;
+  border-color: #19abd6;
+}
+.login-form label {
+  color: #2b2b2b;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 20px;
+  -webkit-transition: 0.2s ease all;
+     -moz-transition: 0.2s ease all;
+          transition: 0.2s ease all;
+}
+.login-form input:focus ~ label,
+.login-form input:valid ~ label,
+.login-form textarea:focus ~ label,
+.login-form textarea:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #19abd6;
+}
+.login-form .social-login {
+  color: #40545a;
+  font-family: 'Montserrat', serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 30px 0 30px;
+}
+.social-buttons {
+  height: 36px;
+  border-radius: 35px;
+  position: relative;
+}
+.social-buttons a {
+  background: #38538a;
+  border-radius: 0 35px 35px 0;
+  color: #f6f6f6;
+  font-weight: 700;
+  float: left;   
+  height: 50px;
+  line-height: 48px;
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
+}
+.social-buttons a:first-child {
+  background: #4099d3;
+  border-radius: 35px 0 0 35px;
+}
+.social-buttons a:hover,
+.social-buttons a:focus {
+  opacity: 0.8;
+}
+.social-buttons a:active {
+  opacity: 0.8;
+}
+.social-buttons p {
+  background: #fff;
+  border-radius: 35px;
+  color: #40545a;
+  float: left;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;
+  font-size: 16px;
+  font-weight: 700;
+  height: 70px;
+  line-height: 66px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  width: 70px;
+  z-index: 10;
+}
+.login-form .register {
+  color: #40545a;
+  display: block;
+  font-family: 'Montserrat', serif;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 30px;
+}
+.login-form .register a {
+  color: #19abd6;
+}
+/*-----------------------------------------
+02) Responsive
+--------------------------------------------------*/
+@media screen and (max-width: 768px){
+.logo-big {
+  width: 60px;
+}
+  .welcome-content {
+    min-width: 100%; 
+    padding: 10px;
+  }
+  .welcome-content {
+    margin-top: 10px;
+  }
+  .welcome h1 {
+    font-size: 50px;
+  }
+  .welcome h2 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .login-form {
+    padding: 20px 10px 10px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .welcome-content {
+    min-width: 100%; 
+    padding: 10px;
+  }
+}
